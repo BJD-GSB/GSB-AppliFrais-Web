@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="ico" href="../../favicon.ico" />
+
+
+    <!-- ---------- Feuilles de Style ------------- -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../../style/style.css">
+
+    <!-------------- Feuilles Java ------------>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+
+    <title>Support GSB</title>
+</head>
+
+<body>
+    <header id="head-connec">
+     <a href="../../../"><img src="../../Images/logo.png" alt="Logo GSB" id="Logo" title="Logo GSB"></a>
+
+        <nav class="container">
+            <div class="links">
+                <ul>
+                    <li><a href="../../../" class="a-connec" >Revenir à l'accueil</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+<section class="back-supp">
+
+    <div class="title-connec">
+        <h1>Support</h1>
+    </div>
+
+
+    <section class="form-supp">
+        <div class="formulaire-support" >
+                <div class="support-group" id="login">
+                    <div class="group-mail-supp">
+                        <input type="email" name="email" id="email" autocomplete="off" class="input-mail-supp" placeholder="E-mail" required>
+                    </div>
+                    <br>
+                    <div class="group-pass">
+                        <input type="text" name="prenom" id="prenom" autocomplete="off" class="input-mail-supp" placeholder="Prenom" required>
+                    </div>
+                    <br>
+                    <div class="">
+                        <input type="text" name="nom" id="nom" autocomplete="off" class="input-mail-supp" placeholder="Nom" required>
+                    </div>
+
+
+                    <div class="cont-support">
+                        <div>
+                            <input type="radio" name="problem" id="compte" value="compte" class="check-support" required>
+                            <span></span>
+                            <label class="check-s" for="compte">Compte</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="problem" id="bug" value="bug" class="check-support" required>
+                            <span></span>
+                            <label class="check-s" for="bug">Bug</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="problem" id="dp" value="DonneesPersonnels" class="check-support" required>
+                            <span></span>
+                            <label class="check-s" for="dp">Données Personnels</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="problem" id="autre" value="autre" class="check-support" required>
+                            <span></span>
+                            <label class="check-s" for="autre">Autre...</label>
+                        </div>
+                    </div>
+
+                </div>
+
+                <textarea name="" id="field-text-supp" cols="50" rows="15" placeholder="Veuillez expliquer votre problème.." required></textarea>
+                
+                <button type="button" id="submitsupp" name="submitsupp"  class="log-in">Envoyer</button>
+
+	    </div>
+    </section >
+
+
+</section>
+
+
+
+
+<footer class="footer-connec">
+    <div class="footer-container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="../Support/">Contacter le Support</a></li>
+                 </ul>
+            </div>
+            <div class="footer-col" id="connect-supp">
+                <h4>Connexion</h4>
+                <ul>
+                    <li><a href="../Connexion/">Se connecter</a></li>
+                </ul>
+            </div>
+            <div class="footer-col" id="app-supp">
+                <h4>App GSB</h4>
+                <ul>
+                    <li><a href="#">Télécharger</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Nous suivre</h4>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/cleamlnp199/?hl=fr" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/lldi4nierproll/?hl=fr" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/julien___bl/?hl=fr" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-logo">
+                <div class="fot-log">
+                    <img src="../../Images/logo.png" alt="Logo" id="foot-log">
+                </div>
+            </div>
+        </div>
+
+        <div class="rights">GSB © 2022.2023 Tous droits réservés</div>
+
+    </div>
+</footer>
+
+  <!-- -- JavaScripts -- -->
+  <script src="../../style/style.js"></script>
+  <script src="../../services/Support/SendTicket.js" type="module"></script>
+</body>
+
+</html>

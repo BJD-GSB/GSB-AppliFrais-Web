@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="ico" href="../../../favicon.ico" />
+
+
+    <!-- ---------- Feuilles de Style ------------- -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../../../style/style.css">
+
+    <!-------------- Feuilles Java ------------>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+
+    <title>Création Compte</title>
+</head>
+
+<body>
+    <header id="head-connec">
+     <a href="../Accueil/"><img src="../../../Images/logo.png" alt="Logo GSB" id="Logo" title="Logo GSB"></a>
+
+        <nav class="container">
+            <div class="links">
+                <ul>
+                    <li><a href="../Accueil/" class="a-connec" >Revenir à l'accueil</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+<section class="back-add-acc">
+
+    <div class="title-connec">
+        <h1>Création Compte</h1>
+    </div>
+
+
+    <section class="form-add-acc">
+        <div class="formulaire-add-acc" >
+                <div class="add-acc-group" id="login">
+                    <div class="group-mail-supp">
+                        <input required type="email" name="email" id="email" autocomplete="off" class="input-mail-supp" placeholder="E-mail">
+                    </div>
+                    <br>
+                    <div class="group-pass">
+                        <input required type="text" name="prenom" id="prenom" autocomplete="off" class="input-mail-supp" placeholder="Prenom">
+                    </div>
+                    <br>
+                    <div class="">
+                        <input required type="text" name="nom" id="nom" autocomplete="off" class="input-mail-supp" placeholder="Nom">
+                    </div>
+                    <br>
+                    <div class="">
+                        <input required type="password" name="pwd" id="pwd" autocomplete="off" class="input-mail-supp" placeholder="Mot de passe">
+                    </div>
+                    <br>
+                    <div class="">
+                        <input required type="password" name="pwd2" id="pwd2" autocomplete="off" class="input-mail-supp" placeholder="Confirmation">
+                    </div>
+
+                </div>
+
+                <div class="role-add-acc">
+                    <h2>Rôle :</h2>
+                    <div class="role-choix">
+                        <input type="radio" name="role" id="admin" value="admin" class="check-support" required >
+                        <span></span>
+                        <label class="check-s" for="admin">Administrateur</label>
+                    </div>
+                    <div class="role-choix">
+                        <input type="radio" name="role" id="comptable" value="comptable" class="check-support" required>
+                        <span></span>
+                        <label class="check-s" for="comptable">Comptable</label>
+                    </div>
+                    <div class="role-choix">
+                        <input type="radio" name="role" id="client" value="client" class="check-support" required>
+                        <span></span>
+                        <label class="check-s" for="client">Client</label>
+                    </div>
+
+                </div>
+
+                <div class="sexe-add-acc">
+                    <h2>Sexe :</h2>
+                    <div class="role-choix">
+                        <input type="radio" name="sexe" id="Homme" value="homme" class="check-support" required >
+                        <span></span>
+                        <label class="check-s" for="Homme">Homme</label>
+                    </div>
+                    <div class="role-choix">
+                        <input type="radio" name="sexe" id="Femme" value="femme" class="check-support" required>
+                        <span></span>
+                        <label class="check-s" for="Femme">Femme</label>
+                    </div>
+                    <div class="role-choix">
+                        <input type="radio" name="sexe" id="Autre" value="autre" class="check-support" required>
+                        <span></span>
+                        <label class="check-s" for="Autre">Autre</label>
+                    </div>
+
+                </div>
+                
+                <button type="button" id="submitaccount" name="submitaccount"  class="create-acc">Créer</button>
+
+	    </div>
+    </section >
+
+
+</section>
+
+
+
+
+<footer class="footer-connec">
+    <div class="footer-container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="../../Support/">Contacter le Support</a></li>
+                 </ul>
+            </div>
+            <div class="footer-col" id="connect-supp">
+                <h4>App GSB</h4>
+                <ul>
+                    <li><a href="#">Télécharger</a></li>
+                </ul>
+            </div>
+            <div class="footer-col" id="app-supp">
+                <h4>App GSB</h4>
+                <ul>
+                    <li><a href="#">Télécharger</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Nous suivre</h4>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/cleamlnp199/?hl=fr" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/lldi4nierproll/?hl=fr" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/julien___bl/?hl=fr" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-logo">
+                <div class="fot-log">
+                    <img src="../../../Images/logo.png" alt="Logo" id="foot-log">
+                </div>
+            </div>
+        </div>
+
+        <div class="rights">GSB © 2022.2023 Tous droits réservés</div>
+
+    </div>
+</footer>
+
+  
+<!-- -- JavaScripts -- -->
+<script src="../../../style/style.js"></script>
+<script src="../../../services/Auth/createusr.js" type="module"></script>
+
+
+</body>
+
+</html>
+

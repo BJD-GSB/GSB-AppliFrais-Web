@@ -1,0 +1,927 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,900&family=Poppins:wght@300;400;500;600;700;800&family=Tapestry&display=swap');
+
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: #8FAFD5;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: "Playfair Display SC", 'Trebuchet MS', sans-serif;
+    background-repeat: no-repeat;
+}
+
+header {
+    position: fixed;
+    width:100%;
+    padding: 1rem;
+    display:inline-flex;
+    justify-content:space-between;
+    align-items: center;
+    z-index: 1;
+    transition: 0.45s; 
+}
+
+#head-connec{
+    position: absolute;
+}
+
+header.scrolled{
+    width:100%;
+    padding: 0.5rem;
+    display:inline-flex;
+    justify-content:space-between;
+    align-items: center;
+    box-shadow: 0 7px 20px 0.1px rgba(0, 0, 0, 0.641);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    z-index: 1;
+}
+
+
+
+#Logo {
+    position: relative;
+    width: 110px;
+    transition: 0.45s;
+}
+
+
+
+.title{
+        position: relative;
+        font-family: 'Cinzel', 'Trebuchet MS', sans-serif;
+        font-size: 1.7rem;
+        letter-spacing: 1px;
+        color: #fff;
+        padding-left: 90px;
+}
+
+nav ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: apparition 0.85s ease-out;
+    list-style: none;
+    opacity: 0.9;
+    transition: 0.3s;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 13px 23px;
+    font-family: "Poppins", 'Trebuchet MS', sans-serif;
+    color: #fff;
+    border-radius: 100px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background: #fff;
+    color: black;
+}
+
+.links{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.lot_images{
+    background-image: url(../Images/backg3.jpg);
+    height: 889px;
+    background-repeat: no-repeat;
+    box-shadow: inset 65px 65px 200px #4F83BF,
+    inset -100px 0px 150px #7197C8;
+}
+
+.txt-accueil{
+    padding-top: 15%;
+    font-family: 'Cinzel', 'Trebuchet MS', sans-serif;
+    letter-spacing: 1px;
+    position: relative;
+    font-size: 35px;
+    color: #DCE6FF;
+    text-align: center;
+    text-shadow: 2px 1px 2px black;
+}
+
+.txt-accueil2{
+    font-family: 'Cinzel', 'Trebuchet MS', sans-serif;
+    letter-spacing: 1px;
+    font-size: 35px;
+    color: #DCE6FF;
+    text-align: center;
+    text-shadow: 2px 1px 2px black;
+    display: block ruby;
+}
+
+.gsb-titre2{
+    font-family: 'Cinzel', 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    letter-spacing: 1px;
+    font-size: 50px;
+    color: #c76932;
+    text-shadow: 2px 1px 2px black;
+}
+
+
+.gsb-titre{
+    position: relative;
+    padding-top: 1%;
+    font-family: 'Cinzel', 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    letter-spacing: 1px;
+    font-size: 50px;
+    text-align: center;
+    color: #3d9eff;
+    text-shadow: 2px 1px 2px black;
+}
+
+.sec-txt{
+    text-align: justify;
+    height: fit-content;
+    box-shadow: inset 65px 65px 200px #4F83BF,
+    inset -100px -100px 150px #7197C8;
+    padding: 0 0 100px 0;
+}
+
+.title-txt{
+position: relative;
+text-align: center;
+
+}
+
+.title-pres{
+    position: relative;
+    font-size: 40px;
+    padding-top: 2%;
+    text-align: center;
+}
+
+#img-pres{
+    position: relative;
+    width: 150px;
+}
+
+.txt-pres{
+    padding-top: 2.5%;
+    margin: auto;
+    width: 75%;
+    font-family: "Poppins", 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    font-weight: 100;
+}
+
+.download-app{
+    padding: 100px 0 0 0;
+    text-align: center;
+    justify-content: space-between;
+}
+
+#GoogleP{
+    width: 180px;
+}
+
+#AppleS{
+    width: 180px;
+}
+
+
+
+/*_____________________________________________________________________________________________________________________________________ */
+/* Image Scrool */
+/*__________________________________*/
+
+.scroll-downs {
+    position: absolute;
+    top: 80%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    
+    width :34px;
+    height: 55px;
+  }
+  .mousey {
+    width: 3px;
+    padding: 10px 15px;
+    height: 35px;
+    border: 2px solid #000;
+    border-radius: 25px;
+    opacity: 0.75;
+    box-sizing: content-box;
+  }
+  .scroller {
+    width: 3px;
+    height: 10px;
+    border-radius: 25%;
+    background-color: #000;
+    animation-name: scroll;
+    animation-duration: 2.2s;
+    animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes scroll {
+    0% { opacity: 0; }
+    10% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(15px); opacity: 0;}
+  }
+
+/*_____________________________________________________________________________________________________________________________________ */
+/* CONNEXION PAGE*/
+/*_____________________________________________________________________________________________________________________________________ */
+
+.back-connec{
+    height: 800px;
+    background-image: url(../Images/footer1.png);
+    background-color: #fff;
+    background-repeat: no-repeat;
+}
+
+
+nav ul li .a-connec{
+    text-decoration: none;
+    padding: 13px 23px;
+    font-family: "Poppins", 'Trebuchet MS', sans-serif;
+    color: #000;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+nav ul li .a-connec:hover{
+    background: #000;
+    color: #fff;
+}
+
+.title-connec{
+    padding-top: 3.5%;
+    font-family: 'Cinzel', 'Trebuchet MS', sans-serif;
+    letter-spacing: 1px;
+    position: relative;
+    font-size: 40px;
+    color: #DCE6FF;
+    text-align: center;
+    text-shadow: 2px 1px 2px black;
+}
+
+
+/*_____________________________________________________________________________________________________________________________________ */
+/* FORMAULAIRE */
+/*______________*/
+
+.form-sec{
+    position: relative;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.7px);
+    -webkit-backdrop-filter: blur(9.7px);
+    border: 1px solid rgba(255, 255, 255, 0.36);
+    height: 70%;
+    width: 50%;
+    top: 5%;
+    margin: auto;
+}
+
+.group-user{
+    margin-top : 20%;
+    position: relative;
+}
+
+
+.formulaire{
+text-align: center;
+}
+
+.input-group {
+    position: relative;
+}
+
+.group-pass{
+    position: relative;
+}
+
+   
+.input-user {
+    border: solid 3px #fff;
+    border-radius: 1rem;
+    background: none;
+    padding: 1rem;
+    font-size: 1.3rem;
+    color: #f5f5f5;
+    transition: border 150ms cubic-bezier(0.4,0,0.2,1);
+}
+
+.input-pass{
+    border: solid 3px #fff;
+    border-radius: 1rem;
+    background: none;
+    padding: 1rem;
+    font-size: 1.3rem;
+    color: #f5f5f5;
+    transition: border 150ms cubic-bezier(0.4,0,0.2,1);
+    z-index: 1;
+}
+   
+   
+.input-user:focus, .input-user:valid {
+    outline: none;
+    border: 3px solid #3cdce7;
+}
+   
+
+.input-pass:focus, .input-pass:valid {
+    outline: none;
+    border: 3px solid #3cdce7;
+}
+
+
+.log-in{
+    position: absolute;
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    border: 2px solid #fff;
+    background-color: #fff;
+    border-radius: 45px;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    bottom: 50px;
+    right: 50px;
+}
+  
+.log-in:hover {
+    background-color: #3cdce7;
+    box-shadow: 0px 15px 20px #14d9e0a2;
+    color: #fff;
+    border: 2px solid #3cdce7;
+    transform: translateY(-7px);
+}
+  
+.log-in:active {
+    transform: translateY(-1px);
+}
+
+.pass-reset{
+    position: absolute;
+    padding: 1.3em 3em;
+    font-size: 8px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    border: 2px solid #fff;
+    background-color: #fff;
+    border-radius: 45px;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    bottom: 50px;
+    left: 60px;
+}
+
+.pass-reset:hover{
+    background-color: #e73c3c;
+    box-shadow: 0px 15px 20px #e01e14a2;
+    color: #fff;
+    border: 2px solid #e73c3c;
+    transform: translateY(-7px);
+}
+
+.pass-reset:active{
+    transform: translateY(-1px);
+}
+
+#user-icon{
+    width: 40px;
+    position: relative;
+    top: 10px;
+}
+
+#pass-icon{
+    width: 40px;
+    position: relative;
+    top: 10px;
+
+}
+
+.cont {
+    display: flex;
+    align-items: center;
+    transform: scale(1);
+}
+
+.check-p{
+    position: relative;
+    left: 33%;
+    margin-top: 5%;
+    font-size: 13px;
+    font-style: italic;
+    color: #fff;
+    font-family: "Poppins", 'Trebuchet MS', sans-serif;
+
+}
+   
+.check-connect{
+    height: 1rem;
+    width: 1rem;
+    margin: 5px;
+    display: inline-block;
+    appearance: none;
+    position: relative;
+    background-color: #F2ECFF;
+    border-radius: 15%;
+    cursor: pointer;
+    overflow: hidden;
+    left: 33%;
+    margin-top: 5%;
+}
+   
+.check-connect::after {
+    content: '';
+    display: block;
+    height: 0.9rem;
+    width: .4rem;
+    border-bottom: .10rem solid #a0ffe7;
+    border-right: .10rem solid #a0ffe7;
+    opacity: 0;
+    transform: rotate(45deg) translate(-50%, -50%);
+    position: absolute;
+    top: 45%;
+    left: 21%;
+    transition: .25s ease;
+}
+   
+.check-connect::before {
+    content: '';
+    display: block;
+    height: 0;
+    width: 0;
+    background-color: #3cdce7;
+    border-radius: 50%;
+    opacity: .5;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: .3s ease;
+}
+   
+.check-connect:checked::before {
+    height: 130%;
+    width: 130%;
+    opacity: 100%;
+}
+   
+.check-connect:checked::after {
+    opacity: 100%;
+}
+   
+span {
+    font-size: 2rem;
+}
+
+
+/*_____________________________________________________________________________________________________________________________________ */
+/* ACCUEIL */
+/*______________*/
+
+.log-out-btn{
+    text-decoration: none;
+    padding: 10px 20px;
+    font-family: "Poppins", 'Trebuchet MS', sans-serif;
+    color: #fff;
+    border-radius: 100px;
+    transition: 0.5s;
+    background-color: #f5f5f500;
+    border: none;
+}
+
+.log-out-btn:hover{
+    background: #fff;
+    color: black;
+    cursor: pointer;
+}
+
+.log-out-btn:hover > #user-header{
+    content: url("../Images/user.png");
+    transition: all .4s ease;
+}
+
+#user-header{
+    width: 30px;
+}
+
+/*_____________________________________________________________________________________________________________________________________ */
+/* Creation PAGE*/
+/*__________________*/
+
+
+.back-add-acc{
+    height: 800px;
+    background-image: url(../Images/back-add-acc.jpg);
+    background-color: #fff;
+    background-repeat: no-repeat;
+}
+
+.form-add-acc{
+    position: relative;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.7px);
+    -webkit-backdrop-filter: blur(9.7px);
+    border: 1px solid rgba(255, 255, 255, 0.36);
+    height: 70%;
+    width: 60%;
+    top: 5%;
+    margin: auto;
+    font-size: 25px;
+}
+
+.formulaire-add-acc{
+    padding-top: 5%;
+    padding-left: 3%;
+}
+
+.role-add-acc{
+    display:block;
+    align-items: center;
+    width: fit-content;
+    font-size: 15px;
+    transform: scale(1);
+}
+
+.sexe-add-acc{
+    display:block;
+    align-items: center;
+    width: fit-content;
+    font-size: 15px;
+    transform: scale(1);
+    padding-top: 25px;
+}
+
+.add-acc-group{
+    position: relative;
+    float: right;
+    text-align: center;
+    padding-right: 42%;
+}
+
+.role-choix{
+    width: fit-content;
+    font-size: 45px;
+}
+
+.create-acc{
+    position: absolute;
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    border: 2px solid #fff;
+    background-color: #fff;
+    border-radius: 45px;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    bottom: 50px;
+    right: 50px;
+}
+  
+.create-acc:hover {
+    background-color: #3ce775;
+    box-shadow: 0px 15px 20px #14e095a2;
+    color: #fff;
+    border: 2px solid #3ce775;
+    transform: translateY(-7px);
+}
+  
+.create-acc:active {
+    transform: translateY(-1px);
+}
+
+
+
+
+
+/*_____________________________________________________________________________________________________________________________________ */
+/* SUPPORT PAGE*/
+/*_____________________________________________________________________________________________________________________________________ */
+
+.back-supp{
+    height: 800px;
+    background-image: url(../Images/backg.png);
+    background-color: #fff;
+    background-repeat: no-repeat;
+}
+
+.form-supp{
+    position: relative;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.7px);
+    -webkit-backdrop-filter: blur(9.7px);
+    border: 1px solid rgba(255, 255, 255, 0.36);
+    height: 70%;
+    width: 60%;
+    top: 5%;
+    margin: auto;
+}
+
+.text-field-supp{
+    position: relative;
+    left: 70px;
+    top: 80px;
+}
+
+.support-group{
+    position: relative;
+    float: left;
+}
+
+.group-mail-supp{
+    margin-top : 5%;
+    position: relative;
+}
+
+.input-mail-supp{
+        border: solid 3px #fff;
+        border-radius: 1rem;
+        background: none;
+        padding: 1rem;
+        font-size: 1rem;
+        transition: border 150ms cubic-bezier(0.4,0,0.2,1);
+}
+
+.input-mail-supp:focus, .input-mail-supp:valid {
+    outline: none;
+    border: 3px solid #3cdce7;
+}
+   
+.formulaire-support{
+    padding-top: 5%;
+    padding-left: 3%;
+}
+
+#field-text-supp{
+    position: relative;
+    left: 70px;
+    top: 60px;
+    border: solid 3px #fff;
+    border-radius: 1rem;
+    background: none;
+    padding: 1rem;
+    font-size: 1rem;
+    transition: border 150ms cubic-bezier(0.4,0,0.2,1);
+    resize: none;
+}
+
+#field-text-supp:focus{
+    outline: none;
+    border: 3px solid #3cdce7;
+}
+
+.check-s{
+    position: relative;
+    bottom: 6px;
+    font-size: 15px;
+    font-style: italic;
+    color: #000;
+    font-family: "Poppins", 'Trebuchet MS', sans-serif;
+
+}
+
+.cont-support{
+    padding-top: 10%;
+    display:block;
+    align-items: left;
+    transform: scale(1);
+}
+
+.check-support{
+    height: 1rem;
+    width: 1rem;
+    margin: 5px;
+    display: inline-block;
+    appearance: none;
+    position: relative;
+    background-color: #F2ECFF;
+    border-radius: 15%;
+    cursor: pointer;
+    overflow: hidden;
+    margin-top: 7%;
+}
+   
+.check-support::after {
+    content: '';
+    display: block;
+    height: 0.9rem;
+    width: .4rem;
+    border-bottom: .10rem solid #a0ffe7;
+    border-right: .10rem solid #a0ffe7;
+    opacity: 0;
+    transform: rotate(45deg) translate(-50%, -50%);
+    position: absolute;
+    top: 45%;
+    left: 21%;
+    transition: .25s ease;
+}
+   
+.check-support::before {
+    content: '';
+    display: block;
+    height: 0;
+    width: 0;
+    background-color: #3cdce7;
+    border-radius: 50%;
+    opacity: .5;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: .3s ease;
+}
+   
+.check-support:checked::before {
+    height: 130%;
+    width: 130%;
+    opacity: 100%;
+}
+   
+.check-support:checked::after {
+    opacity: 100%;
+}
+
+#app-supp{
+    visibility: collapse;
+}
+
+
+
+/*_____________________________________________________________________________________________________________________________________ */
+/* FOOTER */
+/*______________*/
+
+
+footer {
+    background: linear-gradient(120deg, #c76932 70%, #4F83BF 30%);
+    padding: 2% 3% 2% 3%;
+    width: 100%;
+    box-shadow: 7px 0px 20px 10px rgba(0, 0, 0, 0.641);
+}
+
+
+footer ul {
+    list-style: none;
+}
+
+.footer-container {
+    max-width: 100%;
+    margin: auto;
+
+}
+
+.row {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #fff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: rgb(155, 155, 155);
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+    max-width: fit-content;
+    color: #404040;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #fff;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    padding-top: 0;
+    width: 40px;
+    background-color: #4b4b4b;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: rgb(255, 255, 255);
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: #4b4b4b;
+    background-color: #fff
+}
+
+#foot-log{
+    position: relative;
+    width: 250px;
+    left: 40%;
+}
+
+.rights{
+    font-size: 13px;
+    font-family: "Cinzel", 'Trebuchet MS', sans-serif;
+    color: #fff;
+    text-align: left;
+    padding-left: 23%;
+}
+
+
+
+/* RESPONSIV*/
+@media(max-width : 832px){
+    div.title{
+        display: none;
+    }
+    .txt-accueil{
+        padding-top: 30%;
+        font-size: 20px;
+    }
+    .gsb-titre{
+        font-size: 32px;
+    }
+    #foot-log{
+        left: 60%;
+        width: 180px;
+        padding-bottom: 10%;
+    }
+
+}
+
+@media(max-width : 767px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width : 574px) {
+    .footer-col {
+        width: 100%;
+    }
+}
