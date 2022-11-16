@@ -56,6 +56,7 @@ const analytics = getAnalytics(app);
 onAuthStateChanged(auth, (user) => {
     
     if (user) {
+        
         const RoleData = ref(database, 'users/' + user.uid + '/role');
         onValue(RoleData, (snapshotRole) => {
             const Role = snapshotRole.val();

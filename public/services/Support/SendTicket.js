@@ -56,6 +56,22 @@ const connectsupp = document.getElementById("connect-supp");
 
 const appsupp = document.getElementById("app-supp");
 
+
+onAuthStateChanged(auth, (user) => {
+    if (user) {
+        // User is signed in, see docs for a list of available properties
+        // https://firebase.google.com/docs/reference/js/firebase.User
+        console.log(user);
+        connectsupp.style.visibility = "collapse";
+        appsupp.style.visibility = "visible";
+        // ...
+    } else {
+        // User is signed out
+        // ...
+        console.log(user);
+    }
+});
+
 supportdataEnter.addEventListener('keyup', (e) => {
     if (e.keyCode === 13) {
 
@@ -83,20 +99,6 @@ submitsupp.addEventListener("click", function () {
 
 });
 
-onAuthStateChanged(auth, (user) => {
-    if (user) {
-        // User is signed in, see docs for a list of available properties
-        // https://firebase.google.com/docs/reference/js/firebase.User
-        console.log(user);
-        connectsupp.style.visibility = "collapse";
-        appsupp.style.visibility = "visible";
-        // ...
-    } else {
-        // User is signed out
-        // ...
-        console.log(user);
-    }
-});
 
 function NewTicket(email, prenom, nom, description, problem) {
     const newticketkey = push(child(ref(database), 'tickets')).key;

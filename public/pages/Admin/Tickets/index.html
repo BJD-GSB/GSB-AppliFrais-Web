@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="ico" href="../../../favicon.ico" />
 
 
@@ -25,10 +25,6 @@
     <header id="index">
         <a href="../Accueil/"><img src="../../../Images/logo.png" alt="Logo GSB" id="Logo" title="Logo GSB"></a>
 
-        <div class="title">
-                GSB - Tickets
-        </div>
-
 
         <nav class="container">
             <div class="links">
@@ -41,9 +37,26 @@
 
 
 
-    <section class="lot_images">
-        
+    <section class="back-tickets">
 
+        <div class="title-connec">
+            <h1>Tickets Support</h1>
+        </div>
+
+        <div class="container-table mt-3">
+            <table class="table table-dark">
+                <thead>
+                <th>N°Ticket</th>
+                <th>E-mail</th>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Sujet</th>
+                <th>Description</th>
+                <th></th>
+                </thead>
+                <tbody id="tbody1"></tbody>
+            </table>
+        </div>
 
     </section>
 
@@ -85,6 +98,7 @@
   <!-- -- JavaScripts -- -->
   <script src="../../../style/style.js"></script>
   <script src="../../../services/Controllers/Admin/controllerAdmin.js" type="module"></script>
+  <script src="../../../services/Support/Tickets.js" type="module"></script>
 
 </body>
 </html>
