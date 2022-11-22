@@ -54,36 +54,44 @@ const analytics = getAnalytics(app);
 const pwddataEnter = document.getElementById("pwd");
 
 pwddataEnter.addEventListener('keyup', (e) => {
-    if(e.keyCode === 13){
-        
-    let email = document.getElementById("email").value;
-    let password = document.getElementById("pwd").value;
+    if (e.keyCode === 13) {
 
-    signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
-        // Signed in 
-        const user = userCredential.user;
-        // ...
-        var lgDate = new Date();
-        update(ref(database, 'users/' + user.uid), {
-            last_login: lgDate,
-        })
-            .then(() => {
-                // Data saved successfully!
-                window.location.href = "../../../";
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("pwd").value;
+
+        signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
+            // Signed in 
+            const user = userCredential.user;
+            // ...
+            var lgDate = new Date().toLocaleDateString('fr-FR', {
+                timeZone: 'Europe/Paris',
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+            });
+            update(ref(database, 'users/' + user.uid), {
+                last_login: lgDate,
             })
+                .then(() => {
+                    // Data saved successfully!
+                    window.location.href = "../../../";
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = "Mot de passe ou Email Incorrect.";
+                    alert(errorMessage);
+
+                });
+        })
             .catch((error) => {
                 const errorCode = error.code;
-                const errorMessage = "Mot de passe ou Email Incorrect.";
-                alert(errorMessage);
+                const errorMessage = "Veuillez saisir une adresse mail valide ! (@)";
 
+                alert(errorCode);
             });
-    })
-        .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = "Veuillez saisir une adresse mail valide ! (@)";
-
-            alert(errorCode);
-        });
     }
 })
 
@@ -96,7 +104,15 @@ submitdata.addEventListener("click", function () {
         // Signed in 
         const user = userCredential.user;
         // ...
-        var lgDate = new Date();
+        var lgDate = new Date().toLocaleDateString('fr-FR', {
+            timeZone: 'Europe/Paris',
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+        });
         update(ref(database, 'users/' + user.uid), {
             last_login: lgDate,
         })

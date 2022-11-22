@@ -22,7 +22,7 @@
 
 <body>
     <header id="head-connec">
-     <a href="../Accueil/"><img src="../../../Images/logo.png" alt="Logo GSB" id="Logo" title="Logo GSB"></a>
+     <a href="../Accueil/"><img src="../../../Images/icons/logo.png" alt="Logo GSB" id="Logo" title="Logo GSB"></a>
 
         <nav class="container">
             <div class="links">
@@ -35,6 +35,7 @@
 
 
 <section class="back-add-acc">
+    <img src="../../../Images/backgrounds/Auth/back-add-acc.jpg" alt="Background img" id="background-index">
 
     <div class="title-connec">
         <h1>Création Compte</h1>
@@ -45,23 +46,23 @@
         <div class="formulaire-add-acc" >
                 <div class="add-acc-group" id="login">
                     <div class="group-mail-supp">
-                        <input required type="email" name="email" id="email" autocomplete="off" class="input-mail-supp" placeholder="E-mail">
+                        <input required type="email" name="email" id="email" autocomplete="off" class="input-add-acc" placeholder="E-mail">
                     </div>
                     <br>
                     <div class="group-pass">
-                        <input required type="text" name="prenom" id="prenom" autocomplete="off" class="input-mail-supp" placeholder="Prenom">
+                        <input required type="text" name="prenom" id="prenom" autocomplete="off" class="input-add-acc" placeholder="Prenom">
                     </div>
                     <br>
                     <div class="">
-                        <input required type="text" name="nom" id="nom" autocomplete="off" class="input-mail-supp" placeholder="Nom">
+                        <input required type="text" name="nom" id="nom" autocomplete="off" class="input-add-acc" placeholder="Nom">
                     </div>
                     <br>
                     <div class="">
-                        <input required type="password" name="pwd" id="pwd" autocomplete="off" class="input-mail-supp" placeholder="Mot de passe">
+                        <input required type="password" name="pwd" id="pwd" autocomplete="off" class="input-add-acc" placeholder="Mot de passe">
                     </div>
                     <br>
                     <div class="">
-                        <input required type="password" name="pwd2" id="pwd2" autocomplete="off" class="input-mail-supp" placeholder="Confirmation">
+                        <input required type="password" name="pwd2" id="pwd2" autocomplete="off" class="input-add-acc" placeholder="Confirmation">
                     </div>
 
                 </div>
@@ -148,7 +149,7 @@
             </div>
             <div class="footer-logo">
                 <div class="fot-log">
-                    <img src="../../../Images/logo.png" alt="Logo" id="foot-log">
+                    <img src="../../../Images/icons/logo.png" alt="Logo" id="foot-log">
                 </div>
             </div>
         </div>
@@ -162,6 +163,8 @@
 <!-- -- JavaScripts -- -->
 <script src="../../../style/style.js"></script>
 <script src="../../../services/Auth/createusr.js" type="module"></script>
+<script src="../../../services/Controllers/Admin/controllerAdmin.js" type="module"></script>
+
 
 
 </body>

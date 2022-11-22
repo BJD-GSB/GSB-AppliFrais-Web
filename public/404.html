@@ -61,10 +61,17 @@
     <div id="message">
       <h2>Page Not Found</h2>
       <p>La page que vous recherchez n'existe pas.</p>
-      <a href="../public/"><button class="pass-reset">Revenir a l'accueil</button></a>
+      <button class="pass-reset" onclick="HomePage()">Revenir a l'accueil</button>
     </div>
     
   </div>
+
+
+    <script>
+      function HomePage() {
+          window.location.replace("/");
+      }
+    </script>
 
   
 </body>

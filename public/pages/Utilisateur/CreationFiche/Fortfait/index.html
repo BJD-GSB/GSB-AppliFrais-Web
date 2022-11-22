@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="ico" href="../../../../favicon.ico" />
+
+
+    <!-- ---------- Feuilles de Style ------------- -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../../../../style/style.css">
+
+    <!-------------- Feuilles Java ------------>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+
+    <title>Création Fiche Forfait</title>
+</head>
+
+<body>
+    <header id="head-connec">
+     <a href="../../Accueil/"><img src="../../../../Images/icons/logo.png" alt="Logo GSB" id="Logo" title="Logo GSB"></a>
+
+        <nav class="container">
+            <div class="links">
+                <ul>
+                    <li><a href="../../Accueil/" class="a-connec" >Revenir à l'accueil</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+<section class="back-add-fiche">
+    <img src="../../../../Images/backgrounds/Fiches/back-fiche-forfait.jpg" alt="Background img" id="background-index">
+
+
+    <div class="title-connec">
+        <h1>Création Fiche <span class="fiche-type">Forfait</span></h1>
+    </div>
+
+
+    <section class="form-add-fiche">
+        <div class="formulaire-add-fiche" >
+                <div class="add-fiche-group" id="login">
+
+                    <div class="Left-side">
+                        <div class="div-fiche">
+                            <h2 class="fiches-titre">Titre :</h2>
+                            <input required type="text" name="titre" id="titre" autocomplete="off" class="input-add-fiche" placeholder="Titre Fiche">
+                        </div>
+    
+                        <div class="div-fiche">
+                            <h2 class="fiches-transport">Transport :</h2>
+                           <input required type="number" name="Nbrkm" id="Nbrkm" autocomplete="off" pattern="[0-9]+" min="0" class="input-add-fiche" placeholder="Nombre KM"> <p class="kms">Km</p>
+                        </div>
+                        <div class="selectdiv">
+                            <label>
+                                <select name="PuissF" id="PuissF">
+                                    <option selected disabled value="">Puissance Fiscale</option>
+                                    <option value="4cv" class="selected">0CV à 4CV</option>
+                                    <option value="56cv">5CV à 6CV</option>
+                                    <option value="7cv">7CV à +7CV</option>
+                                </select>
+                            </label>
+                        </div>
+                        <p class="PF">Puissance Fiscale</p>
+                        <div class="selectdiv">
+                            <label>
+                                <select name="Carbur" id="Carbur">
+                                    <option selected disabled value="">Carburant</option>
+                                    <option value="essence">Essence</option>
+                                    <option value="diesel">Diesel</option>
+                                </select>
+                            </label>
+                        </div>
+                        <p class="Carburant">Carburant</p>
+                    </div>
+
+                    
+                    <div class="Middle-left">
+                        <div class="div-fiche-nuit">
+                            <h2 class="fiches-nuits">Nuitées :</h2>
+                            <input required type="number" name="Nbrnuit" id="Nbrnuit" autocomplete="off" pattern="[0-9]+" min="0" class="input-add-fiche" placeholder="Nombre Nuits"> <p class="nuits">Nuits</p>
+                        </div>
+                    </div>
+
+                    <div class="Middle-right">
+                        <div class="div-fiche-repas">
+                            <h2 class="fiches-repas">Repas :</h2>
+                            <input required type="number" name="Nbrrepas" id="Nbrrepas" autocomplete="off" pattern="[0-9]+" min="0" class="input-add-fiche" placeholder="Nombre Repas"> <p class="repas">Repas</p>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <a href="../HorsForfait/" class="horsforfait">Hors-Forfait</a>
+
+                 <button type="button" class="icon-btn add-btn">
+                    <div class="add-icon"></div>
+                    <div class="btn-txt">Pièces Justificatives</div>
+                    <input type="file" accept=".pdf,.png,.jpeg,.jpg" multiple class="sendfile">
+                </button>
+
+                <button type="button" id="submitfiche" name="submitfiche"  class="create-acc">Créer</button>
+
+	    </div>
+    </section >
+
+
+</section>
+
+
+
+
+<footer class="footer-connec">
+    <div class="footer-container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="../../../Support/">Contacter le Support</a></li>
+                 </ul>
+            </div>
+            <div class="footer-col" id="connect-supp">
+                <h4>App GSB</h4>
+                <ul>
+                    <li><a href="#">Télécharger</a></li>
+                </ul>
+            </div>
+            <div class="footer-col" id="app-supp">
+                <h4>App GSB</h4>
+                <ul>
+                    <li><a href="#">Télécharger</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Nous suivre</h4>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/cleamlnp199/?hl=fr" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/lldi4nierproll/?hl=fr" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/julien___bl/?hl=fr" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-logo">
+                <div class="fot-log">
+                    <img src="../../../../Images/icons/logo.png" alt="Logo" id="foot-log">
+                </div>
+            </div>
+        </div>
+
+        <div class="rights">GSB © 2022.2023 Tous droits réservés</div>
+
+    </div>
+</footer>
+
+  
+<!-- -- JavaScripts -- -->
+<script src="../../../../style/style.js"></script>
+<script src="../../../../services/Controllers/Client/controllerClient.js" type="module"></script>
+<script src="../../../../services/Fiches/Send/Forfait/SendFicheForfait.js" type="module"></script>
+
+
+</body>
+
+</html>
+
