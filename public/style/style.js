@@ -4,14 +4,14 @@ const logo = document.getElementById("Logo");
 
 /* -------------- Sticky Nav ----------------*/
 
-function stickyNavbar(){
+function stickyNavbar() {
     header.classList.toggle("scrolled", window.pageYOffset > 0);
-    if(window.pageYOffset > 0){
+    if (window.pageYOffset > 0) {
         logo.style.width = "100px";
-    }else{
+    } else {
         logo.style.width = "110px";
     }
-}   
+}
 
 window.addEventListener('scroll', stickyNavbar);
 
@@ -23,9 +23,9 @@ let sr = ScrollReveal({
 
 });
 
-sr.reveal(".txt-accueil" ,{ origin: "left", delay:100});
-sr.reveal(".gsb-titre" ,{ origin: "right", delay:100});
-sr.reveal(".txt-accueil2", {origin: "bottom", delay:100});
+sr.reveal(".txt-accueil", { origin: "left", delay: 100 });
+sr.reveal(".gsb-titre", { origin: "right", delay: 100 });
+sr.reveal(".txt-accueil2", { origin: "bottom", delay: 100 });
 
 
 
@@ -39,4 +39,10 @@ let src = ScrollReveal({
 
 });
 
-src.reveal(".title-connec",{origin: "top", delay:100});
+src.reveal(".title-connec", { origin: "top", delay: 100 });
+
+
+/* -------------- SCROLL IN VIEW ----------------*/
+
+const element = document.getElementById("comptable-table-forfait");
+element.scrollIntoView();

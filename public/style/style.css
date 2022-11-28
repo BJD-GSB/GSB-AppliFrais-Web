@@ -878,6 +878,8 @@ th{
 
 .mt-3{
     margin-top: 1rem !important;
+    overflow: auto;
+    height: 70vh;
 }
 
 .table-dark{
@@ -1001,8 +1003,11 @@ th{
 
 
 #statusimg{
+    border-top: 1px solid #fff;
+    border-top-color: rgb(255, 255, 255);
+    border-top-color: #fff;
     width: 30px;
-    margin: 4px 17px;
+    margin: .29rem 1rem;
 }
 
 .table-fiches {
@@ -1055,6 +1060,8 @@ th {
 
 .mt-3-fiche {
     margin-top: 1rem !important;
+    overflow: auto;
+    height: 70vh;
 }
 
 .table-dark-fiche {
@@ -1062,10 +1069,28 @@ th {
     background-color: #396c38;
 }
 
-.titles-fiches-forfait{
-padding-bottom: 10px;
-font-size: 20px;
+.titles-fiches-forfait-utilis{
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 20px;
+    width: fit-content;
+    backdrop-filter: blur(3px);
+    background-color: #c76932b2;
+    border-radius: 50px;
+    color: #fff;
 }
+
+.titles-fiches-forfait-comptable{
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 20px;
+    width: fit-content;
+    backdrop-filter: blur(3px);
+    background-color: #396c38b4;
+    border-radius: 50px;
+    color: #fff;
+}
+    
 
 .fiche-type-get{
 color: #396c38;
@@ -1087,10 +1112,9 @@ color: #396c38;
     
 
 
-
 #Validerbutton {
     padding: 0.5em 1.5em;
-    margin: 0.8em;
+    margin: 0.895em;
     font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 2.5px;
@@ -1104,6 +1128,7 @@ color: #396c38;
     outline: none;
     bottom: 50px;
     left: 60px;
+    
 }
 
 #Validerbutton:hover {
