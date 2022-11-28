@@ -82,16 +82,18 @@ submitfiche.addEventListener("click", function () {
 
 
 function NewFicheForfait(titre, NbrKm, PF, Carburant, NbrNuit, NbrRepas) {
-    const newficheforfait = push(child(ref(database), 'fiches/forfait')).key;
-
-
+    let useruid = auth.currentUser.uid; 
     let usermail = auth.currentUser.email;
+
+    const newficheforfait = push(child(ref(database), 'fiches/' + useruid + "/" + "forfait")).key;
 
     let date = new Date().toLocaleDateString('fr-FR', {
         timeZone: 'Europe/Paris',
     });
     
-    set(ref(database, 'fiches/forfait/' + newficheforfait), {
+    set(ref(database, 'fiches/' + useruid + "/" + "forfait/" + newficheforfait), {
+        id_forfait: newficheforfait,
+        id_user: useruid,
         date: date,
         titre: titre,
         email: usermail,

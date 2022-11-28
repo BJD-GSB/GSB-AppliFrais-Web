@@ -104,6 +104,7 @@ function NewTicket(email, prenom, nom, description, problem) {
     const newticketkey = push(child(ref(database), 'tickets')).key;
 
     set(ref(database, 'tickets/' + newticketkey), {
+            id_ticket: newticketkey,
             email: email,
             prenom: prenom,
             nom: nom,

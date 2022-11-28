@@ -84,16 +84,18 @@ submitfiche.addEventListener("click", function () {
 
 
 function NewFicheHorsForfait(titre, titre1, prix1, titre2, prix2, titre3,prix3) {
-    const newfichehorsforfait = push(child(ref(database), 'fiches/horsforfait')).key;
-
-
+    let useruid = auth.currentUser.uid; 
     let usermail = auth.currentUser.email;
+
+    const newfichehorsforfait = push(child(ref(database), 'fiches/' + useruid + "/" + "horsforfait")).key;
 
     let date = new Date().toLocaleDateString('fr-FR', {
         timeZone: 'Europe/Paris',
     });
     
-    set(ref(database, 'fiches/horsforfait/' + newfichehorsforfait), {
+    set(ref(database, 'fiches/' + useruid + "/" + "horsforfait/" + newfichehorsforfait), {
+        id_horsforfait: newfichehorsforfait,
+        id_user: useruid,
         date: date,
         email: usermail,
         titre: titre,

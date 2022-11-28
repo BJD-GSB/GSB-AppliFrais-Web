@@ -20,12 +20,13 @@
 
 
 
-    <title>Fiches Comptable GSB</title>
+    <title>Fiches Utilisateur GSB</title>
 </head>
 
 <body>
     <header id="head-connec">
-        <a href="../../Accueil/"><img src="../../../../Images/icons/logo.png" alt="Logo GSB" id="Logo" title="Logo GSB"></a>
+        <a href="../../Accueil/"><img src="../../../../Images/icons/logo.png" alt="Logo GSB" id="Logo"
+                title="Logo GSB"></a>
 
 
         <nav class="container">
@@ -40,20 +41,20 @@
 
 
     <section class="back-fiches-forfait">
-        <img src="../../../../Images/backgrounds/Fiches/Back-get-fiches-forfait.jpg" alt="Background img"
+        <img src="../../../../Images/backgrounds/Fiches/back-get-fiches-utilisateur.jpg" alt="Background img"
             id="comptable-fiches-forfait">
 
         <div class="title-connec">
-            <h1>Fiches <span class="fiche-type-get">Forfait</span></h1>
+            <h1>Fiches <span class="fiche-type-get-utilis">Hors-Forfait : </span><span class="fiche-type-get-utilis" id="UserName">...</span></h1>
         </div>
 
         <section class="Get-fiches-sec">
-            <li><a href="../HorsForfait/" class="horsforfait2">Hors-Forfait</a></li>
+            <li><a href="../Forfait/" class="horsforfait3">Forfait</a></li>
 
             <div class="container-table-fiches mt-3-fiche">
                 <div class="left-side-fiche">
-                    <h2 class="titles-fiches-forfait">Infos :</h2>
-                    <table class="table-fiches table-dark-fiche">
+                    <h2 class="titles-fiches-forfait-utilis"> Infos : </h2>
+                    <table class="table-fiches table-dark-fiche-utilis">
                         <thead>
                             <th>N°Fiche</th>
                             <th>Date</th>
@@ -64,48 +65,49 @@
                     </table>
                 </div>
                 <div class="middle-left-fiche">
-                    <h2 class="titles-fiches-forfait">Transport :</h2>
-                    <table class="table-fiches table-dark-fiche">
+                    <h2 class="titles-fiches-forfait-utilis"> Element 1 : </h2>
+                    <table class="table-fiches table-dark-fiche-utilis">
                         <thead>
-                            <th>Nombre Km</th>
-                            <th>Puissance Fiscale</th>
-                            <th>Carburant</th>
+                            <th>Titre</th>
+                            <th>Prix (€)</th>
                         </thead>
                         <tbody id="tbody2"></tbody>
                     </table>
                 </div>
                 <div class="middle-right-fiche">
-                    <h2 class="titles-fiches-forfait">Nuits :</h2>
-                    <table class="table-fiches table-dark-fiche">
+                    <h2 class="titles-fiches-forfait-utilis"> Element 2 : </h2>
+                    <table class="table-fiches table-dark-fiche-utilis">
                         <thead>
-                            <th>Nombre Nuits</th>
+                            <th>Titre</th>
+                            <th>Prix (€)</th>
                         </thead>
                         <tbody id="tbody3"></tbody>
                     </table>
                 </div>
                 <div class="right-side-fiche">
-                    <h2 class="titles-fiches-forfait">Repas :</h2>
-                    <table class="table-fiches table-dark-fiche">
+                    <h2 class="titles-fiches-forfait-utilis"> Element 3 : </h2>
+                    <table class="table-fiches table-dark-fiche-utilis">
                         <thead>
-                            <th>Nombre Repas</th>
+                            <th>Titre</th>
+                            <th>Prix (€)</th>
                         </thead>
                         <tbody id="tbody4"></tbody>
                     </table>
                 </div>
-                <div class="confirm-side-fiche">
-                    <h2 class="titles-fiches-forfait" style="visibility:hidden;">Confirmation</h2>
-                    <table class="table-fiches table-dark-fiche">
+                <div class="status-side-fiche">
+                    <h2 class="titles-fiches-forfait" style="visibility:hidden;">Status</h2>
+                    <table class="table-fiches table-dark-fiche-utilis">
                         <thead>
-                            <th>Réponse</th>
+                            <th>Status</th>
                         </thead>
                         <tbody id="tbody5"></tbody>
                     </table>
                 </div>
-                <div class="status-side-fiche">
-                    <h2 class="titles-fiches-forfait" style="visibility:hidden;">Status</h2>
-                    <table class="table-fiches table-dark-fiche">
+                <div class="dl-side-fiche">
+                    <h2 class="titles-fiches-forfait" style="visibility:hidden;">Download</h2>
+                    <table class="table-fiches table-dark-fiche-utilis">
                         <thead>
-                            <th>Status</th>
+                            <th>PDF</th>
                         </thead>
                         <tbody id="tbody6"></tbody>
                     </table>
@@ -154,8 +156,9 @@
 
     <!-- -- JavaScripts -- -->
     <script src="../../../../style/style.js"></script>
-    <script src="../../../../services/Controllers/Comptable/controllerComptable.js" type="module"></script>
-    <script src="../../../../services/Fiches/Comptable/Receive/Forfait/ReceiveFicheForfait.js" type="module"></script>
+    <script src="../../../../services/Controllers/Client/controllerClient.js" type="module"></script>
+    <script src="../../../../services/Fiches/Client/Receive/Hors-Forfait/ReceiveFicheHorsForfait.js" type="module"></script>
+
 
 </body>
 

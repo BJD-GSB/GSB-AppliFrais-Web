@@ -56,8 +56,8 @@
                             <h2 class="fiches-transport">1er élement :</h2>
                            <input required type="text" name="titre1" id="titre1" autocomplete="off"  class="input-add-fiche" placeholder="Titre">
                         </div>
-                        <div>
-                            <input required type="number" name="prix1" id="prix1"  pattern="[0-9]+" min="0" autocomplete="off"  class="input-add-fiche" placeholder="Prix"><p>€</p>
+                        <div class="div-fiche-prix1">
+                            <input required type="number" name="prix1" id="prix1"  pattern="[0-9]+" min="0" autocomplete="off"  class="input-add-fiche" placeholder="Prix"><p class="prix1">€</p>
                         </div>
                     </div>
 
@@ -67,8 +67,8 @@
                             <h2 class="fiches-nuits">2ème Element :</h2>
                             <input required type="text" name="titre2" id="titre2" autocomplete="off" class="input-add-fiche" placeholder="Titre">
                         </div>
-                        <div>
-                            <input required type="number" name="prix2" id="prix2"  pattern="[0-9]+" min="0" autocomplete="off"  class="input-add-fiche" placeholder="Prix"><p>€</p>
+                        <div class="div-fiche-prix2">
+                            <input required type="number" name="prix2" id="prix2"  pattern="[0-9]+" min="0" autocomplete="off"  class="input-add-fiche" placeholder="Prix"><p class="prix2">€</p>
                         </div>
                     </div>
 
@@ -77,8 +77,8 @@
                             <h2 class="fiches-repas">3ème Element :</h2>
                             <input required type="text" name="titre3" id="titre3" autocomplete="off" class="input-add-fiche" placeholder="Titre">
                         </div>
-                        <div>
-                            <input required type="number" name="prix3" id="prix3"  pattern="[0-9]+" min="0" autocomplete="off"  class="input-add-fiche" placeholder="Prix"><p>€</p>
+                        <div class="div-fiche-prix3">
+                            <input required type="number" name="prix3" id="prix3"  pattern="[0-9]+" min="0" autocomplete="off"  class="input-add-fiche" placeholder="Prix"><p class="prix3">€</p>
                         </div>
                     </div>
                     
@@ -148,7 +148,7 @@
 <!-- -- JavaScripts -- -->
 <script src="../../../../style/style.js"></script>
 <script src="../../../../services/Controllers/Client/controllerClient.js" type="module"></script>
-<script src="../../../../services/Fiches/Send/Hors-Forfait/SendFicheHorsForfait.js" type="module"></script>
+<script src="../../../../services/Fiches/Client/Send/Hors-Forfait/SendFicheHorsForfait.js" type="module"></script>
 
 
 

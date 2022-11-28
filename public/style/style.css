@@ -828,8 +828,8 @@ span {
 
 .back-tickets {
     height: 100vh;
-    box-shadow: inset 65px 65px 200px #4F83BF,
-        inset -100px 0px 150px #7197C8;
+    box-shadow: inset 10px 10px 300px #4F83BF,
+     inset -50px 0px 50px #7197C8
 }
 
 .table{
@@ -989,6 +989,22 @@ th{
     padding-left: 20px;
 }
 
+.status-side-fiche{
+    width: max-content;
+    padding-left: 20px;
+}
+
+.dl-side-fiche{
+    width: max-content;
+    padding-left: 20px;
+}
+
+
+#statusimg{
+    width: 30px;
+    margin: 4px 17px;
+}
+
 .table-fiches {
     border-collapse: collapse;
     width: 100%;
@@ -1054,6 +1070,21 @@ font-size: 20px;
 .fiche-type-get{
 color: #396c38;
 }
+
+.fiche-type-get-utilis{
+    color: #c76932;
+}
+
+.table-dark-fiche-utilis {
+    color: #fff;
+    background-color: #c76932;
+}
+    
+.titles-fiches-forfait-utilis{
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+    
 
 
 
@@ -1149,6 +1180,35 @@ color: #396c38;
     transform: translateY(-1px);
 }
 
+.horsforfait3{
+    position: absolute;
+    padding: 1em 2em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    border: 2px solid #fff;
+    background-color: #fff;
+    border-radius: 45px;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    right: 20px;
+}
+
+.horsforfait3:hover {
+    background-color: #c76932;
+    box-shadow: 0px 15px 20px #dd5e0aa2;
+    color: #fff;
+    border: 2px solid #c76932;
+    transform: translateY(-7px);
+}
+
+.horsforfait3:active {
+    transform: translateY(-1px);
+}
 
 
 
@@ -1217,6 +1277,34 @@ color: #396c38;
 
 .div-fiche {
     width: fit-content;
+}
+
+.div-fiche-prix1{
+    margin-top: 25px;
+}
+
+.prix1{
+    display: inline;
+    margin-left: 5px;
+    font-size: 25px;
+}
+
+.div-fiche-prix2{
+    margin-top: 25px;
+}
+.prix2{
+    display: inline;
+    margin-left: 5px;
+    font-size: 25px;
+}
+
+.div-fiche-prix3{
+    margin-top: 25px;
+}
+.prix3{
+    display: inline;
+    margin-left: 5px;
+    font-size: 25px;
 }
 
 

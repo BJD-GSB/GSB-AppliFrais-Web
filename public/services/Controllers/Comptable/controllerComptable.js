@@ -51,11 +51,6 @@ const database = getDatabase(app);
 
 const analytics = getAnalytics(app);
 
-
-logout.addEventListener("click", function () {
-    Deconnexion();
-});
-
 onAuthStateChanged(auth, (user) => {
     if (user) {
         const RoleData = ref(database, 'users/' + user.uid + '/role');

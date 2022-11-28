@@ -55,7 +55,7 @@ var ok = "OK";
 var suppr = "Supprimer";
 var tbody = document.getElementById('tbody1');
 
-function AddTicketToTable(email, nom, prenom, problem, desc){
+function AddTicketToTable(id_ticket, email, nom, prenom, problem, desc) {
     let trow = document.createElement('tr');
     let td1 = document.createElement('td');
     let td2 = document.createElement('td');
@@ -67,22 +67,50 @@ function AddTicketToTable(email, nom, prenom, problem, desc){
     let td8 = document.createElement('button');
 
 
-    td1.innerHTML= ++NbrTickets;
-    td2.innerHTML= email;
-    td3.innerHTML= nom;
-    td4.innerHTML= prenom;
-    td5.innerHTML= problem;
-    td6.innerHTML= desc;
+    td1.innerHTML = ++NbrTickets;
+    td2.innerHTML = email;
+    td3.innerHTML = nom;
+    td4.innerHTML = prenom;
+    td5.innerHTML = problem;
+    td6.innerHTML = desc;
 
     td7.setAttribute('id', 'OKbutton');
     td7.setAttribute('type', 'button');
     td7.setAttribute('name', 'OKbutton');
-    td7.innerHTML= ok;
+
+    td7.onclick = function (e) {
+
+        if (confirm("Voulez-vous vraiment Valider ce Ticket ?")) {
+
+            remove(ref(database, 'tickets/' + id_ticket))
+                .then(() => {
+                    alert("Ticket Validé !");
+                })
+        } else {
+            alert("Action annulé !");
+        }
+    };
+
+    td7.innerHTML = ok;
 
     td8.setAttribute('id', 'Supprbutton');
     td8.setAttribute('type', 'button');
     td8.setAttribute('name', 'Supprbutton');
-    td8.innerText= suppr;
+
+    td8.onclick = function (e) {
+
+        if (confirm("Voulez-vous vraiment Supprimer ce Ticket ?")) {
+
+            remove(ref(database, 'tickets/' + id_ticket))
+                .then(() => {
+                    alert("Ticket Annuler !");
+                })
+        } else {
+            alert("Action annulé !");
+        }
+    };
+
+    td8.innerText = suppr;
 
 
     trow.appendChild(td1);
@@ -98,26 +126,26 @@ function AddTicketToTable(email, nom, prenom, problem, desc){
     tbody.appendChild(trow);
 }
 
-function AddAllTicketsToTable(Tickets){
-    NbrTickets=0;
-    tbody.innerHTML="";
+function AddAllTicketsToTable(Tickets) {
+    NbrTickets = 0;
+    tbody.innerHTML = "";
     Tickets.forEach(element => {
-        AddTicketToTable(element.email, element.nom, element.prenom, element.problem, element.description);
+        AddTicketToTable(element.id_ticket, element.email, element.nom, element.prenom, element.problem, element.description);
     });
 }
 
 
-function GetAllTicketsRT(){
+function GetAllTicketsRT() {
     const dbref = ref(database, "tickets");
 
-   onValue(dbref, (snapshot)=>{
-    var tickets = [];
+    onValue(dbref, (snapshot) => {
+        var tickets = [];
 
-    snapshot.forEach(childSnapshot => {
-        tickets.push(childSnapshot.val());
+        snapshot.forEach(childSnapshot => {
+            tickets.push(childSnapshot.val());
+        })
+        AddAllTicketsToTable(tickets)
     })
-    AddAllTicketsToTable(tickets)
-   })
 }
 
 window.onload = GetAllTicketsRT;
