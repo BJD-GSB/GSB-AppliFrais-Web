@@ -117,8 +117,42 @@ onAuthStateChanged(auth, (user) => {
             let td1 = document.createElement('td');
             let td2 = document.createElement('td');
             let td3 = document.createElement('td');
+            let td4 = document.createElement('td');
 
-
+            switch (carburant) {
+                case "Essence":
+                    switch (pf) {
+                        case "4CV":
+                            var result =0.62 * nbrkm;
+                            td4.innerHTML = result.toFixed(2) + " €";
+                            break;
+                        case "5-6CV":
+                            var result = 0.67 * nbrkm;
+                            td4.innerHTML = result.toFixed(2) + " €";
+                            break;
+                        case "7CV":
+                            var result = 0.72 * nbrkm;
+                            td4.innerHTML = result.toFixed(2) + " €";
+                            break;
+                    }
+                    break;
+                case "Diesel":
+                    switch (pf) {
+                        case "4CV":
+                            var result = 0.52 * nbrkm;
+                            td4.innerHTML = result.toFixed(2) + " €";
+                            break;
+                        case "5-6CV":
+                            var result = 0.58 * nbrkm;
+                            td4.innerHTML = result.toFixed(2) + " €";
+                            break;
+                        case "7CV":
+                            var result = 0.65 * nbrkm;
+                            td4.innerHTML = result.toFixed(2) + " €";
+                            break;
+                    }
+                    break;
+            }
 
 
             td1.innerHTML = nbrkm;
@@ -129,6 +163,8 @@ onAuthStateChanged(auth, (user) => {
             trow.appendChild(td1);
             trow.appendChild(td2);
             trow.appendChild(td3);
+            trow.appendChild(td4);
+
 
 
 
