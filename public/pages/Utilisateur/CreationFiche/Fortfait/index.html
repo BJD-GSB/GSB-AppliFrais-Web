@@ -50,20 +50,20 @@
                     <div class="Left-side">
                         <div class="div-fiche">
                             <h2 class="fiches-titre">Titre :</h2>
-                            <input required type="text" name="titre" id="titre" autocomplete="off" class="input-add-fiche" placeholder="Titre Fiche">
+                            <input type="text" name="titre" id="titre" autocomplete="off" class="input-add-fiche" placeholder="Titre Fiche" required>
                         </div>
     
                         <div class="div-fiche">
                             <h2 class="fiches-transport">Transport :</h2>
-                           <input required type="number" name="Nbrkm" id="Nbrkm" autocomplete="off" pattern="[0-9]+" min="0" class="input-add-fiche" placeholder="Nombre KM"> <p class="kms">Km</p>
+                           <input type="number" name="Nbrkm" id="Nbrkm" autocomplete="off" pattern="[0-9]+" min="0" class="input-add-fiche" placeholder="Nombre KM" onkeypress="return isNumberKey(event)" required> <p class="kms">Km</p>
                         </div>
                         <div class="selectdiv">
                             <label>
                                 <select name="PuissF" id="PuissF">
                                     <option selected disabled value="">Puissance Fiscale</option>
-                                    <option value="4cv" class="selected">0CV à 4CV</option>
-                                    <option value="56cv">5CV à 6CV</option>
-                                    <option value="7cv">7CV à +7CV</option>
+                                    <option value="0-4CV" class="selected">0CV à 4CV</option>
+                                    <option value="5-6CV">5CV à 6CV</option>
+                                    <option value="7CV">7CV à +7CV</option>
                                 </select>
                             </label>
                         </div>
@@ -72,8 +72,8 @@
                             <label>
                                 <select name="Carbur" id="Carbur">
                                     <option selected disabled value="">Carburant</option>
-                                    <option value="essence">Essence</option>
-                                    <option value="diesel">Diesel</option>
+                                    <option value="Essence">Essence</option>
+                                    <option value="Diesel">Diesel</option>
                                 </select>
                             </label>
                         </div>
@@ -84,14 +84,14 @@
                     <div class="Middle-left">
                         <div class="div-fiche-nuit">
                             <h2 class="fiches-nuits">Nuitées :</h2>
-                            <input required type="number" name="Nbrnuit" id="Nbrnuit" autocomplete="off" pattern="[0-9]+" min="0" class="input-add-fiche" placeholder="Nombre Nuits"> <p class="nuits">Nuits</p>
+                            <input type="number" name="Nbrnuit" id="Nbrnuit" autocomplete="off" pattern="[0-9]+" min="0" class="input-add-fiche" placeholder="Nombre Nuits" onkeypress="return isNumberKey(event)" required> <p class="nuits">Nuits</p>
                         </div>
                     </div>
 
                     <div class="Middle-right">
                         <div class="div-fiche-repas">
                             <h2 class="fiches-repas">Repas :</h2>
-                            <input required type="number" name="Nbrrepas" id="Nbrrepas" autocomplete="off" pattern="[0-9]+" min="0" class="input-add-fiche" placeholder="Nombre Repas"> <p class="repas">Repas</p>
+                            <input type="number" name="Nbrrepas" id="Nbrrepas" autocomplete="off" pattern="[0-9]+" min="0" class="input-add-fiche" placeholder="Nombre Repas" onkeypress="return isNumberKey(event)" required> <p class="repas">Repas</p>
                         </div>
                     </div>
                     
@@ -102,7 +102,7 @@
                  <button type="button" class="icon-btn add-btn">
                     <div class="add-icon"></div>
                     <div class="btn-txt">Pièces Justificatives</div>
-                    <input type="file" accept=".pdf,.png,.jpeg,.jpg" multiple class="sendfile">
+                    <input type="file" accept=".pdf,.png,.jpeg,.jpg" multiple class="sendfile" id="piecejustif">
                 </button>
 
                 <button type="button" id="submitfiche" name="submitfiche"  class="create-acc">Créer</button>

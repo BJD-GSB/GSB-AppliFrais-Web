@@ -234,20 +234,20 @@ onAuthStateChanged(auth, (user) => {
 
             switch (status) {
                 case "validé":
-                    var sourcestatus = "../../../../images/icons/validé";
+                    var sourcestatus = "../../../../Images/icons/validé.png";
                     td1.setAttribute('src', sourcestatus);
                     td1.setAttribute('alt', 'status validé');
                     td1.setAttribute('title', 'Validé');
                     break;
                 case "refuser":
-                    var sourcestatus = "../../../../images/icons/refuser";
+                    var sourcestatus = "../../../../Images/icons/refuser.png";
                     td1.setAttribute('src', sourcestatus);
                     td1.setAttribute('alt', 'status refusé');
                     td1.setAttribute('title', 'Refusé');
 
                     break;
                 default:
-                    var sourcestatus = "../../../../images/icons/attente";
+                    var sourcestatus = "../../../../Images/icons/attente.png";
                     td1.setAttribute('src', sourcestatus);
                     td1.setAttribute('alt', 'status en attente');
                     td1.setAttribute('title', 'En Attente');

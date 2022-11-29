@@ -9,6 +9,8 @@ import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/
 
 import { getDatabase, set, ref, update, push, child } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-database.js";
 
+import { getStorage } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-storage.js";
+
 
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -50,8 +52,12 @@ const database = getDatabase(app);
 
 const analytics = getAnalytics(app);
 
+const Storage = getStorage(app); 
+
+
 const submitficheenter = document.getElementById("titre");
 
+const piecejustif = document.getElementById('piecejustif');
 
 submitficheenter.addEventListener('keyup', (e) => {
     if (e.keyCode === 13) {
@@ -90,6 +96,15 @@ function NewFicheForfait(titre, NbrKm, PF, Carburant, NbrNuit, NbrRepas) {
     let date = new Date().toLocaleDateString('fr-FR', {
         timeZone: 'Europe/Paris',
     });
+
+    // piecejustif.onchange = function(){
+
+    //     let file = document.getElementById("piecejustif").value;
+    //     console.log(file);
+         
+    //     var UploadTask =  firebase.Storage().ref("Fiches/" + useruid + "/forfait/" + file ).put(file[0]);
+    // }
+    
     
     set(ref(database, 'fiches/' + useruid + "/" + "forfait/" + newficheforfait), {
         id_forfait: newficheforfait,
@@ -109,3 +124,5 @@ function NewFicheForfait(titre, NbrKm, PF, Carburant, NbrNuit, NbrRepas) {
         alert("Erreur :" + error);
     });
 };
+
+
