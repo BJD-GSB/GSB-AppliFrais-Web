@@ -133,6 +133,9 @@ function AddFicheForfaitToTable2(nbrkm, pf, carburant) {
     td2.innerHTML = pf;
     td3.innerHTML = carburant;
 
+    td4.setAttribute('class', 'prixtransport');
+
+
     switch (carburant) {
         case "Essence":
             switch (pf) {
@@ -222,10 +225,20 @@ function GetAllFichesForfaitRT2() {
 function AddFicheForfaitToTable3(nbrnuit) {
     let trow = document.createElement('tr');
     let td1 = document.createElement('td');
+    let td2 = document.createElement('td');
+
 
     td1.innerHTML = nbrnuit;
+    td2.setAttribute('class', 'prixtransport');
+
+
+    var result = nbrnuit * 70; 
+    td2.innerHTML = result.toFixed(2) + " €";
+
 
     trow.appendChild(td1);
+    trow.appendChild(td2);
+
 
 
     tbodynuits.appendChild(trow);
@@ -273,11 +286,19 @@ function GetAllFichesForfaitRT3() {
 function AddFicheForfaitToTable4(nbrrepas) {
     let trow = document.createElement('tr');
     let td1 = document.createElement('td');
+    let td2 = document.createElement('td');
+
 
     td1.innerHTML = nbrrepas;
+    td2.setAttribute('class', 'prixtransport');
+
+
+    var result = nbrrepas * 6.99;
+    td2.innerHTML = result.toFixed(2) + " €";
 
 
     trow.appendChild(td1);
+    trow.appendChild(td2);
 
 
     tbodyrepas.appendChild(trow);

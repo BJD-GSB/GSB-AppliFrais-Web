@@ -132,6 +132,7 @@ function AddFicheHorsForfaitToTable2(element1, prix1){
     let td2 = document.createElement('td');
 
     td1.innerHTML= element1;
+    td2.setAttribute('class', 'prixtransport');
     td2.innerHTML= prix1;
 
 
@@ -186,6 +187,7 @@ function AddFicheHorsForfaitToTable3(element2, prix2){
     let td2 = document.createElement('td');
 
     td1.innerHTML= element2;
+    td2.setAttribute('class', 'prixtransport');
     td2.innerHTML= prix2;
 
 
@@ -240,6 +242,7 @@ function AddFicheHorsForfaitToTable4(element3, prix3){
     let td2 = document.createElement('td');
 
     td1.innerHTML= element3;
+    td2.setAttribute('class', 'prixtransport');
     td2.innerHTML= prix3;
 
 

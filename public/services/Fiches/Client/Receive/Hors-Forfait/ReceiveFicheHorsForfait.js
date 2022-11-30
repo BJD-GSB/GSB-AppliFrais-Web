@@ -118,7 +118,9 @@ onAuthStateChanged(auth, (user) => {
             let td2 = document.createElement('td');
 
             td1.innerHTML = element1;
+            td2.setAttribute('class', 'prixtransport');
             td2.innerHTML = prix1;
+
 
 
             trow.appendChild(td1);
@@ -156,6 +158,7 @@ onAuthStateChanged(auth, (user) => {
             let td2 = document.createElement('td');
 
             td1.innerHTML = element2;
+            td2.setAttribute('class', 'prixtransport');
             td2.innerHTML = prix2;
 
 
@@ -194,6 +197,7 @@ onAuthStateChanged(auth, (user) => {
             let td2 = document.createElement('td');
 
             td1.innerHTML = element3;
+            td2.setAttribute('class', 'prixtransport');
             td2.innerHTML = prix3;
 
 
